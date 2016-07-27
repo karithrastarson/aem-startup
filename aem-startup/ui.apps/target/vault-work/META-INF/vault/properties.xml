@@ -4,7 +4,7 @@
 <comment>AEM Startup - UI apps</comment>
 <entry key="createdBy">kari.thrastarson</entry>
 <entry key="name">aem-startup.ui.apps</entry>
-<entry key="created">2016-07-27T14:23:41.604+0200</entry>
+<entry key="created">2016-07-27T14:47:32.861+0200</entry>
 <entry key="groupId">com.valtech.aemstartup</entry>
 <entry key="version">1.0-SNAPSHOT</entry>
 <entry key="requiresRoot">false</entry>
