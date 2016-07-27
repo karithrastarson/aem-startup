@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>AEM Startup - UI apps</comment>
+<entry key="createdBy">kari.thrastarson</entry>
+<entry key="name">aem-startup.ui.apps</entry>
+<entry key="created">2016-07-27T13:54:45.415+0200</entry>
+<entry key="groupId">com.valtech.aemstartup</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">aemstartup</entry>
+<entry key="description">UI apps package for AEM Startup</entry>
+<entry key="artifactId">aem-startup.ui.apps</entry>
+<entry key="path">/etc/packages/aemstartup/aem-startup.ui.apps.zip</entry>
+</properties>
