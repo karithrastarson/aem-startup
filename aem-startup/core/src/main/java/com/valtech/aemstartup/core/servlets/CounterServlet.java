@@ -58,40 +58,45 @@ public class CounterServlet extends SlingAllMethodsServlet {
 		 final Resource resource = req.getResource();
 
 		 
-		 String debug = "";
+		
 		    try {
-		    	debug = debug + " A";
+		    	
 		       	String resourcePath = "/content/aemstartup/data";
-		       	debug = debug + " B";
+		       
 		        ResourceResolver obj2 = req.getResourceResolver();
-		        debug = debug + " C";
+		     
 		        Resource res2 = obj2.getResource(resourcePath);
-		        debug = debug + " D";
+		     
 		        Node node=res2.adaptTo(Node.class);
-		        debug = debug + " E";
+		        
 		        log.info("Node: " + node.toString());
-		        debug = debug + " F";
+		       
 		        Session session=node.getSession();
-		        debug = debug + " G";
+		
 		        String oldVal = node.getProperty("value").getValue().toString();
 		 
-		        log.info("NODE VALUE: " + node.getProperty("value").getValue().toString());
-		      
-		        debug = debug + " H";
-		        
-		        long newVal = Integer.parseInt(oldVal)+1;
-		        debug = debug + " I";
-		        
+		        long newVal;
+		
+		        if(sign.equals("plus")){
+		        	newVal = Integer.parseInt(oldVal) + 1;
+		        }
+		        else if(sign.equals("minus")){
+		        	newVal = Integer.parseInt(oldVal) - 1;
+		        }
+		        else{
+		        	newVal = 0;
+		        }
+		    
+		 
 		        node.setProperty("value",  newVal);
-		        debug = debug + " J";
+		
 		        session.save();
-		        debug = debug + " K";
+		
 		        dataArray.put(new JSONObject().put("newVal",newVal));
-		        debug = debug + " L";
+		      
 		        dataArray.write(res.getWriter());
 		        
 	        } catch (Exception e){
-	        	log.info("Debugger Number: " + debug);
 	        	log.info("Exception: " + e.getMessage());
 	        	throw new ServletException();
 	        }
