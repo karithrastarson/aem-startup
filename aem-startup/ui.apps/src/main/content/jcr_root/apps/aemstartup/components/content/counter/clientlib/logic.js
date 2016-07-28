@@ -1,15 +1,15 @@
 $(document).on("click", "#minus", function() {
-
+       var sign = "minus";
     $.ajax({
-        url: "/services/CounterServlet",
+        url: "/services/counterServlet",
         type: "POST",
         data: {
-            firstname: firstname,
-            lastname: lastname
+            sign: sign
         },
         success: function (data) {
         	
-        	alert("Success!");
+        	var response = data[0].newVal;
+          	 document.getElementById("bigheader").innerHTML = reponse;
         },
         error: function () {
         	alert("Error!");
@@ -18,19 +18,20 @@ $(document).on("click", "#minus", function() {
         }
     });
 });
-
 $(document).on("click", "#plus", function() {
+    var sign = "plus";
 
     $.ajax({
-        url: "/services/CounterServlet",
+        url: "/services/counterServlet",
         type: "POST",
         data: {
-            firstname: firstname,
-            lastname: lastname
+            sign: sign
         },
+        
         success: function (data) {
         	
-        	alert("Success!");
+          	var response = data[0].newVal;
+        	 document.getElementById("bigheader").innerHTML = reponse;
         },
         error: function () {
         	alert("Error!");

@@ -1,9 +1,22 @@
 <section data-sly-use.counter="com.valtech.aemstartup.core.models.CounterModel">
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}" data-sly-unwrap/>
+<sly data-sly-call="${clientLib.js @ categories='aemstartup.components'}" data-sly-unwrap/>
+
+
 
 <p>${counter.value}</p>
+<h2 id="bigcounter"></h2>
+
+    
 
 <button id="plus" > + </button>
-<button id="minus"> + </button>
+<button id="minus"> - </button>
 
 
-</section>
+
+
+
+
+
+
+
