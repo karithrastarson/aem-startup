@@ -1,8 +1,0 @@
-com\valtech\aemstartup\core\schedulers\SimpleScheduledTask.class
-com\valtech\aemstartup\core\models\HelloWorldModel.class
-com\valtech\aemstartup\core\servlets\SimpleServlet.class
-com\valtech\aemstartup\core\listeners\SimpleResourceListener.class
-com\valtech\aemstartup\core\servlets\CounterServlet.class
-com\valtech\aemstartup\core\models\CounterModel.class
-com\valtech\aemstartup\core\package-info.class
-com\valtech\aemstartup\core\filters\LoggingFilter.class
